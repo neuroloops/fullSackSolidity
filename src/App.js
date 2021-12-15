@@ -6,8 +6,8 @@ import Greeter from './artifacts/contracts/Greeter.sol/Greeter.json'
 const greeterAddress = '0x5FbDB2315678afecb367f032d93F642f64180aa3'
 
 function App() {
-  const [greeting, setGreetingValue] = useState()
-
+  const [greeting, setGreetingValue] = useState('')
+  console.log(process.env.REACT_APP_PRIVATE_KEY)
   async function requestAccount() {
     await window.ethereum.request({ method: 'eth_requestAccounts' })
   }
